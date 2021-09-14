@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2, 3단 구현</title>
+  </head>
+  <body>
+    <h1>2단과 3단 출력하기</h1>
+    <p id="n2"></p>
+    <p class="n3"></p>
+    <p class="n3"></p>
+    <p class="n3"></p>
+    <p class="n3"></p>
+    <p class="n3"></p>
+    <p class="n3"></p>
+    <p class="n3"></p>
+
+    <script>
+      // var num2 = 2;
+      // var num3 = 3;
+      // var n3_pTag = document.getElementById("n3");
+      // for (var i = 1; i <= 9; i++) {
+      //   console.log(num2 * i);
+      //   // document.write(n2 * i + "  ");
+      // }
+      // var n3_rst = "";
+      // for (var i = 1; i <= 9; i++) {
+      //   n3_rst += num3 * i;
+      //   // console.log(n3 * i);
+      //   // document.write(n3 * i + "  ");
+      // }
+      // n3_pTag.innerHTML = n3_rst;
+
+      var num2 = 2;
+      var num3 = 3;
+      var n3_pTag = document.getElementsByClassName("n3");
+      for (var i = 1; i <= 9; i++) {
+        console.log(num2 * i);
+        // document.write(n2 * i + "  ");
+      }
+      var n3_rst = "";
+      for (var i = 1; i <= 9; i++) {
+        n3_rst += num3 * i;
+        // console.log(n3 * i);
+        // document.write(n3 * i + "  ");
+      }
+      for (var i = 0; i < 7; i++) {
+        n3_pTag[i].innerHTML = n3_rst;
+      }
+    </script>
+  </body>
+</html>
