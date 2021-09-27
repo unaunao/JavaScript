@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8, 9단 if 구문 사용</title>
+  </head>
+  <body>
+    출력할 단수를 입력<br />
+    <input type="text" id="num" value="" />
+    <button type="button" onclick="goGugudan()">확인</button>
+    <h1><b></b>단</h1>
+    <p class="rst"></p>
+    <script>
+      function goGugudan() {
+        let num = Number(document.getElementById("num").value);
+        const h1Tag = document.getElementsByTagName("h1")[0];
+        let rst = document.getElementsByClassName("rst")[0];
+        rst.innerHTML = "";
+        if (num > 1 && num < 10) {
+          for (var i = 1; i < 10; i++) {
+            // document.write(num * i + "<br>");
+            rst.innerHTML += num * i + "<br>";
+          }
+          h1Tag.children[0].innerHTML = num;
+        } else {
+          rst.innerHTML = "2이상, 9이하의 값만 입력할 수 있습니다.";
+        }
+      }
+    </script>
+  </body>
+</html>
