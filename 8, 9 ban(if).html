@@ -9,11 +9,14 @@
   <body>
     출력할 단수를 입력<br />
     <input type="text" id="num" value="" />
-    <button type="button" onclick="goGugudan()">확인</button>
+    <button type="button" id="btn01">확인</button>
     <h1><b></b>단</h1>
     <p class="rst"></p>
     <script>
-      function goGugudan() {
+      let btnGgdan = document.getElementById("btn01");
+      btnGgdan.addEventListener("click", submitGgdan);
+
+      function submitGgdan() {
         let num = Number(document.getElementById("num").value);
         const h1Tag = document.getElementsByTagName("h1")[0];
         let rst = document.getElementsByClassName("rst")[0];

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>break, continue</title>
+  </head>
+  <body>
+    <!-- 반복문2 -->
+    <!-- break는 loop 한개만 빠져나온다 -->
+    <!-- continue는 반복문의 처음으로 돌아갑니다. -->
+    <script>
+      //   let str;
+      //   while (true) {
+      //     str = prompt("아무거나 입력하세요");
+      //     document.write(str + "<br>");
+      //     if (str == "q") {
+      //       break;
+      //     }
+      //   }
+      //   document.write("Bye~");
+
+      for (var i = 0; i < 10; i++) {
+        // console.log(i);
+        if (i == 5) {
+          break;
+        }
+        console.log(i);
+      }
+
+      //   for (var i = 0; i < 10; i++) {
+      //     if (i == 5) {
+      //       continue;
+      //     }
+      //     console.log(i);
+      //   }
+
+      // 이중 loop 밖에 한번 돌고 안에 조건 모두 완전 돌고, 다시 밖에 한번 안에 완전 돌고
+
+      for (var i = 0; i < 3; i++) {
+        for (var j = 0; j < 5; j++) {
+          console.log("i= " + i + ", j= " + j);
+          if (j == 2) {
+            break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
