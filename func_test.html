@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+  </head>
+  <body>
+    <h1>test</h1>
+    <script>
+      // loop문 하나만 해당 조건에서 잠시 나와짐
+      //   for (var i = 0; i < 10; i++) {
+      //     for (var j = 0; j < 10; j++) {
+      //       console.log(i, j);
+      //       if (i === 5 && j === 3) {
+      //         break;
+      //       }
+      //     }
+      //   }
+      // 두개의 loop 나오려면 함수와 return 사용
+      var foo = function () {
+        for (var i = 0; i < 10; i++) {
+          for (var j = 0; j < 10; j++) {
+            console.log(i, j);
+            if (i === 5 && j === 3) {
+              return;
+            }
+          }
+        }
+      };
+      foo();
+    </script>
+  </body>
+</html>
